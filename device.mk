@@ -229,7 +229,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.data_no_toggle=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	persist.radio.data_con_rprt=true
+    persist.radio.data_con_rprt=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ril.force_eri_from_xml=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.texture_cache_size=72 \
@@ -267,7 +270,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=10 \
     telephony.lteOnCdmaDevice=1 \
-    persist.radio.mode_pref_nv10=1
+    persist.radio.mode_pref_nv10=1 \
+    ro.telephony.get_imsi_from_sim=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.apm_sim_not_pwdn=1
@@ -322,6 +326,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.voicecomm=true \
     persist.audio.product.identify="angler" \
     persist.audio.fluence.speaker=true
+
+# Enable AAC 5.1 output
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.aac_51_output_enabled=true
 
 #stereo speakers: orientation changes swap L/R channels
 PRODUCT_PROPERTY_OVERRIDES += \
